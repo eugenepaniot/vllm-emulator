@@ -135,8 +135,8 @@ func requestHandler(ctx *fasthttp.RequestCtx) {
 				log.Printf("sent chunk %d/%d", i+1, numChunks)
 			}
 
-			time.Sleep(5 * time.Millisecond) // to emulate the latency of the LLM or etc
-			// total latency is supposed to be 5 * 200 = 1000ms
+			time.Sleep(40 * time.Millisecond) // to emulate the latency of the LLM or etc
+			// total latency is supposed to be 40 * 200 = 8000ms
 		}
 
 		if !quiet {
